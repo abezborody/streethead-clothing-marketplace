@@ -2,7 +2,7 @@ import "./CategoriesList.styles.scss";
 
 import CategoryItem from "../CategoryItem/CategoryItem.component";
 
-const CategoryList = ({ categories }) => {
+const CategoriesList = ({ categories }) => {
   return (
     <div className="categories-container">
       {categories.map((category) => (
@@ -12,4 +12,4 @@ const CategoryList = ({ categories }) => {
   );
 };
 
-export default CategoryList;
+export default CategoriesList;
