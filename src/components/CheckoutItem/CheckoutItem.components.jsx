@@ -6,26 +6,36 @@ import { useContext } from "react";
 const CheckoutItem = ({ item }) => {
   const { name, price, imageUrl, quantity } = item;
   console.log(item.id);
-  const { increaseItemCart } = useContext(CartContext);
+  const { addItemToCart, removeItemFromCart, deleteCartItemFromCart } =
+    useContext(CartContext);
 
   const increaseHandler = () => {
-    increaseItemCart(item);
+    addItemToCart(item);
+  };
+  const decreaseHandler = () => {
+    removeItemFromCart(item);
+  };
+  const deleteHandler = () => {
+    deleteCartItemFromCart(item);
   };
   // const decreaseHandler = () => {
   //   decreaseItemQuantity(cartItems, item);
   // };
 
   return (
-    <div>
-      <img src={imageUrl} alt={name} />
-      <div>
-        <h2>{name}</h2>
-        <div>
-          <button>—</button>
-          <span>{quantity}</span>
-          <button onClick={increaseHandler}>+</button>
-        </div>
-        <span>{price}</span>
+    <div className="checkout-item-container">
+      <img className="image-container" src={imageUrl} alt={name} />
+      <span className="name">{name}</span>
+      <div className="quantity">
+        <button onClick={decreaseHandler}>—</button>
+        <br />
+        <span className="quantity">{quantity}</span>
+        <br />
+        <button onClick={increaseHandler}>+</button>
+      </div>
+      <span className="price">{price}</span>
+      <div className="remove-button" onClick={deleteHandler}>
+        &#10005;
       </div>
     </div>
   );
