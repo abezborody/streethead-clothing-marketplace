@@ -5,7 +5,6 @@ import { useContext } from "react";
 
 const CheckoutItem = ({ item }) => {
   const { name, price, imageUrl, quantity } = item;
-  console.log(item.id);
   const { addItemToCart, removeItemFromCart, clearItemFromCart } =
     useContext(CartContext);
 
