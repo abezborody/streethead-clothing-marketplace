@@ -1,12 +1,12 @@
 import "./CategoriesList.styles.scss";
 
-import CategoryItem from "../CategoryItem/CategoryItem.component";
+import CategoriesItem from "../CategoriesItem/CategoriesItem.component";
 
 const CategoriesList = ({ categories }) => {
   return (
     <div className="categories-container">
       {categories.map((category) => (
-        <CategoryItem category={category} key={category.id} />
+        <CategoriesItem category={category} key={category.id} />
       ))}
     </div>
   );
