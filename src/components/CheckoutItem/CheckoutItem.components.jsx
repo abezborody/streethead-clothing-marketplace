@@ -2,6 +2,11 @@ import {
   CheckoutItemContainer,
   CheckoutItemOmageContainer,
   Arrow,
+  Value,
+  Name,
+  Price,
+  Quantity,
+  RemoveButton,
 } from "./CheckoutItem.styles.jsx";
 
 import { CartContext } from "../../context/cart.context";
@@ -25,16 +30,14 @@ const CheckoutItem = ({ item }) => {
   return (
     <CheckoutItemContainer>
       <CheckoutItemOmageContainer src={imageUrl} alt={name} />
-      <span className="name">{name}</span>
-      <span className="quantity">
+      <Name>{name}</Name>
+      <Quantity>
         <Arrow onClick={decreaseHandler}>&#10094;</Arrow>
-        <span className="value">{quantity}</span>
+        <Value>{quantity}</Value>
         <Arrow onClick={increaseHandler}>&#10095;</Arrow>
-      </span>
-      <span className="price">{price}</span>
-      <div className="remove-button" onClick={clearItemHandler}>
-        &#10005;
-      </div>
+      </Quantity>
+      <Price>{price}</Price>
+      <RemoveButton onClick={clearItemHandler}>&#10005;</RemoveButton>
     </CheckoutItemContainer>
   );
 };

@@ -24,36 +24,18 @@ export const Arrow = styled.div`
   cursor: pointer;
 `;
 
-/*
-.checkout-item-container {
+export const Value = styled.span`
+  margin: 0 16px;
+`;
 
-
-  .image-container {
-
-  }
-  .name,
-  .quantity,
-  .price {
-    width: 23%;
-  }
-
-  .quantity {
-    display: flex;
-
-    .arrow {
-      
-    }
-
-    .value {
-      margin: 0 16px;
-    }
-  }
-
-  .remove-button {
-    padding-left: 12px;
-    cursor: pointer;
-  }
-}
-
-
-*/
+export const [Name, Price] = styled.span`
+  width: 23%;
+`;
+export const Quantity = styled.span`
+  width: 23%;
+  display: flex;
+`;
+export const RemoveButton = styled.div`
+  padding-left: 12px;
+  cursor: pointer;
+`;
