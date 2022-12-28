@@ -10,7 +10,7 @@ export const CheckoutItemContainer = styled.div`
   align-items: center;
 `;
 
-export const CheckoutItemOmageContainer = styled.img`
+export const CheckoutItemImageContainer = styled.img`
   width: 23%;
   padding-right: 15px;
 
@@ -24,14 +24,19 @@ export const Arrow = styled.div`
   cursor: pointer;
 `;
 
-export const Value = styled.span`
+export const CheckoutItemValue = styled.span`
   margin: 0 16px;
 `;
 
-export const [Name, Price] = styled.span`
+export const CheckoutItemName = styled.span`
   width: 23%;
 `;
-export const Quantity = styled.span`
+
+export const CheckoutItemPrice = styled.span`
+  width: 23%;
+`;
+
+export const CheckoutItemQuantity = styled.span`
   width: 23%;
   display: flex;
 `;

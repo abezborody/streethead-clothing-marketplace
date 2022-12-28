@@ -1,11 +1,11 @@
 import {
   CheckoutItemContainer,
-  CheckoutItemOmageContainer,
+  CheckoutItemImageContainer,
   Arrow,
-  Value,
-  Name,
-  Price,
-  Quantity,
+  CheckoutItemValue,
+  CheckoutItemName,
+  CheckoutItemPrice,
+  CheckoutItemQuantity,
   RemoveButton,
 } from "./CheckoutItem.styles.jsx";
 
@@ -29,14 +29,14 @@ const CheckoutItem = ({ item }) => {
 
   return (
     <CheckoutItemContainer>
-      <CheckoutItemOmageContainer src={imageUrl} alt={name} />
-      <Name>{name}</Name>
-      <Quantity>
+      <CheckoutItemImageContainer src={imageUrl} alt={name} />
+      <CheckoutItemName>{name}</CheckoutItemName>
+      <CheckoutItemQuantity>
         <Arrow onClick={decreaseHandler}>&#10094;</Arrow>
-        <Value>{quantity}</Value>
+        <CheckoutItemValue>{quantity}</CheckoutItemValue>
         <Arrow onClick={increaseHandler}>&#10095;</Arrow>
-      </Quantity>
-      <Price>{price}</Price>
+      </CheckoutItemQuantity>
+      <CheckoutItemPrice>{price}</CheckoutItemPrice>
       <RemoveButton onClick={clearItemHandler}>&#10005;</RemoveButton>
     </CheckoutItemContainer>
   );
