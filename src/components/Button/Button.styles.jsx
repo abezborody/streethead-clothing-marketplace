@@ -1,22 +1,21 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const BaseButton = styled.button`
-  min-width: 165px;
   width: auto;
-  height: 50px;
   letter-spacing: 0.5px;
-  line-height: 50px;
-  padding: 0 24px 0 24px;
+  padding: 12px 20px;
+  border-radius: 16px;
   font-size: 15px;
   background-color: black;
   color: white;
   text-transform: uppercase;
-  font-family: "Inter";
+  font-family: 'Inter';
   font-weight: bolder;
   border: none;
   cursor: pointer;
   display: flex;
   justify-content: center;
+  border: 1px solid transparent;
   transition: all 100ms ease-out;
 
   &:hover {
@@ -32,7 +31,7 @@ export const GoogleSignInButton = styled(BaseButton)`
 
   &:hover {
     background-color: #357ae8;
-    border: none;
+    border: 1px solid transparent;
   }
 `;
 
@@ -44,6 +43,6 @@ export const InvertedButton = styled(BaseButton)`
   &:hover {
     background-color: black;
     color: white;
-    border: none;
+    border: 1px solid transparent;
   }
 `;

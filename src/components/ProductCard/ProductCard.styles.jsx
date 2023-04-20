@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const ProductCartContainer = styled.div`
   width: 100%;
@@ -8,23 +8,32 @@ export const ProductCartContainer = styled.div`
   align-items: center;
   position: relative;
 
+  img {
+    opacity: 1;
+    transition: opacity 200ms ease-out;
+  }
+
   button {
     width: 80%;
-    opacity: 0.7;
+    opacity: 0;
     position: absolute;
-    top: 255px;
-    display: none;
+    top: 266px;
+    transform: translateY(50%);
   }
 
   &:hover {
     img {
-      opacity: 0.8;
+      opacity: 0.9;
+      transition: opacity 200ms ease-out;
     }
 
     button {
-      opacity: 0.85;
+      transform: translateY(0);
+      transition: all 200ms ease-out;
+      opacity: 1;
       display: flex;
     }
+  }
 `;
 
 export const ProductCardImg = styled.img`
@@ -32,6 +41,7 @@ export const ProductCardImg = styled.img`
   height: 95%;
   object-fit: cover;
   margin-bottom: 5px;
+  border-radius: 24px;
 `;
 
 export const ProductCartFooter = styled.div`

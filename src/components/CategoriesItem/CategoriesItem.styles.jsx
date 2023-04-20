@@ -1,66 +1,60 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const BackgroundImage = styled.div`
+  z-index: -1;
   width: 100%;
   height: 100%;
   background-size: cover;
   background-position: center;
-  background-image: ${({ imageUrl }) => `url(${imageUrl})`};
+  background-image: linear-gradient(to bottom, #00000010, #00000080),
+    ${({ imageUrl }) => `url(${imageUrl})`};
 `;
 export const Body = styled.div`
-  height: 90px;
-  padding: 0 25px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  border: 1px solid black;
-  background-color: white;
-  opacity: 0.7;
+  justify-content: start;
   position: absolute;
-
-  h2 {
-    font-weight: bold;
-    margin: 18px 32px 0;
-    font-size: 22px;
-    color: #4a4a4a;
-  }
-
-  p {
-    font-weight: lighter;
-    font-size: 16px;
-  }
+  font-weight: bold;
+  font-size: 44px;
+  color: #ffffff;
 `;
 
 export const CategoriesItemContainer = styled.div`
   min-width: 30%;
-  height: 240px;
+  min-height: 200px;
   flex: 1 1 auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid black;
-  margin: 0 7.5px 15px;
+  border: 1px solid #00000020;
+  border-radius: 32px;
+  margin: 0;
   overflow: hidden;
-
+  & ${BackgroundImage} {
+    transform: scale(1);
+    transition: transform 300ms cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  }
   &:hover {
     cursor: pointer;
 
     & ${BackgroundImage} {
       transform: scale(1.1);
-      transition: transform 2s cubic-bezier(0.25, 0.45, 0.45, 0.95);
-    }
-
-    & ${Body} {
-      opacity: 0.9;
+      transition: transform 300ms cubic-bezier(0.25, 0.45, 0.45, 0.95);
     }
   }
 
   &:first-child {
-    margin-right: 7.5px;
+    grid-column: 1 / span 4;
+    grid-row: span 2;
   }
 
-  &:last-child {
-    margin-left: 7.5px;
+  &:nth-child(n + 2) {
+    grid-column: span 2;
+  }
+
+  &:nth-child(n + 4) {
+    grid-column: span 3;
   }
 `;
