@@ -42,6 +42,7 @@ export const ProductCardImg = styled.img`
   object-fit: cover;
   margin-bottom: 8px;
   border-radius: 24px;
+  border: 1px solid #00000050;
 `;
 
 export const ProductCartFooter = styled.div`
