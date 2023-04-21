@@ -8,8 +8,8 @@ export const NavigationContainer = styled.div`
   justify-content: space-between;
   margin-bottom: 24px;
   padding: 8px 16px 8px 16px;
-  border: 1px solid #00000050;
-  /* background-color: #c1f377; */
+  /* border: 1px solid #00000050; */
+  background-color: #c1f377;
   border-radius: 24px;
 `;
 
@@ -19,6 +19,7 @@ export const LogoContainer = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 8px;
 `;
 
 export const NavLinks = styled.div`
@@ -30,10 +31,10 @@ export const NavLinks = styled.div`
 `;
 
 export const NavLink = styled(Link)`
-  padding: 10px 15px;
+  padding: 12px 16px;
   cursor: pointer;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 18px;
   opacity: 1;
   transition: opacity 200ms ease-out;
 
@@ -42,24 +43,3 @@ export const NavLink = styled(Link)`
     transition: opacity 200ms ease-out;
   }
 `;
-
-// .navigation {
-//   .logo-container {
-//     height: 100%;
-//     width: 70px;
-//     padding: 25px;
-//   }
-
-//   .nav-links-container {
-//     width: 50%;
-//     height: 100%;
-//     display: flex;
-//     align-items: center;
-//     justify-content: flex-end;
-
-//     .nav-link {
-//       padding: 10px 15px;
-//       cursor: pointer;
-//     }
-//   }
-// }

@@ -40,7 +40,7 @@ export const ProductCardImg = styled.img`
   width: 100%;
   height: 95%;
   object-fit: cover;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   border-radius: 24px;
 `;
 
@@ -50,13 +50,11 @@ export const ProductCartFooter = styled.div`
   display: flex;
   justify-content: space-between;
   font-size: 18px;
+  padding: 8px;
 `;
 
-export const ProductCardName = styled.span`
-  width: 90%;
-  margin-bottom: 15px;
-`;
+export const ProductCardName = styled.span``;
 
 export const ProductCardPrice = styled.span`
-  width: 10%;
+  font-weight: 600;
 `;

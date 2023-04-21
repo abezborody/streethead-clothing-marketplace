@@ -6,22 +6,27 @@ export const BackgroundImage = styled.div`
   height: 100%;
   background-size: cover;
   background-position: center;
-  background-image: linear-gradient(to bottom, #00000010, #00000080),
+  background-image: linear-gradient(to bottom, #00000000, #000000),
     ${({ imageUrl }) => `url(${imageUrl})`};
 `;
 export const Body = styled.div`
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: start;
   position: absolute;
+  bottom: 32px;
+  left: 32px;
   font-weight: bold;
-  font-size: 44px;
+  font-size: 32px;
   color: #ffffff;
+  transform: translateY(0);
+  transition: transform 300ms cubic-bezier(0.25, 0.45, 0.45, 0.95);
 `;
 
 export const CategoriesItemContainer = styled.div`
+  position: relative;
   min-width: 30%;
   min-height: 200px;
   flex: 1 1 auto;
@@ -42,6 +47,10 @@ export const CategoriesItemContainer = styled.div`
     & ${BackgroundImage} {
       transform: scale(1.1);
       transition: transform 300ms cubic-bezier(0.25, 0.45, 0.45, 0.95);
+    }
+
+    & ${Body} {
+      transform: translateY(-4px);
     }
   }
 
