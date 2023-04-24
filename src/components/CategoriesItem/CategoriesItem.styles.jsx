@@ -5,12 +5,13 @@ export const BackgroundImage = styled.div`
   width: 100%;
   height: 100%;
   background-size: cover;
-  background-position: center;
-  background-image: linear-gradient(to bottom, #00000000, #000000),
+  background-position: top;
+  background-image: linear-gradient(#11111100, #111111),
     ${({ imageUrl }) => `url(${imageUrl})`};
 `;
 export const Body = styled.div`
   /* width: 100%; */
+  z-index: 5;
   display: flex;
   flex-direction: column;
   align-items: center;
